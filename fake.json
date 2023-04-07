@@ -1,11 +1,10 @@
 {
-  "posts": [
+  "task": [
     {
-      "id": 1,
-      "title": "hello"
+      "id": "1",
+      "name": "task1",
+      "description": "todo1",
+      "author": "somebody1"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
