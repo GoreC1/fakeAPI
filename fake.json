@@ -1,6 +1,5 @@
 {
-  "data" : {
-    "task": [
+    "tasks": [
       {
         "id": "1",
         "name": "task1",
@@ -36,5 +35,4 @@
         "name" : "Uncompleted"
       }
     ]
-  }
 }
