@@ -24,5 +24,15 @@
       "description": "todo4",
       "author": "somebody4"
     }
+  ],
+  "typeOfTask": [
+    {
+      "id" : "1",
+      "name" : "Completed"
+    },
+    {
+      "id" : "2",
+      "name" : "Uncompleted"
+    }
   ]
 }
