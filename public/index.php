@@ -1,11 +1,6 @@
 <?php
 include '../config/config.php';
 
-//$page = 'index';
-//if (isset($_GET['page'])) {
-//    $page = $_GET['page'];
-//}
-
 $url_array = explode('/', $_SERVER['REQUEST_URI']);
 if( $url_array[1] == "") {
     $page = 'index';
@@ -31,6 +26,12 @@ switch ($page) {
 
     case 'gallery':
         $params['title'] = 'Галерея';
+        $params['gallery'] = getGallery(BIG_IMGS);
+        break;
+
+    case 'lesson20':
+        $params['title'] = 'lesson20';
+        $params['folders'] = getFolders();
         break;
 
     case 'apicatalog':
@@ -55,21 +56,3 @@ switch ($page) {
 }
 
 echo render($page, $params);
-
-
-
-//$page = 'index';
-//
-//$params = [
-//    'test' => 'test',
-//    'title' => 'Главная',
-//    'phone' => '+7 495 12-23-12'
-//];
-
-//echo renderTemplate('index', $params);
-
-//echo renderTemplate(LAYOUTS_DIR . 'main', [
-//    'title' => $params['title'],
-//    'menu' => renderTemplate('menu'),
-//    'content' => renderTemplate($page, $params)
-//]);

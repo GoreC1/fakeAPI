@@ -11,8 +11,8 @@ function renderTemplate($page, $params = []) {
     return ob_get_clean();
 }
 
-function render($page, $params = []) {
-    return renderTemplate(LAYOUTS_DIR . 'main', [
+function render($page, $params = [], $layout = 'main') {
+    return renderTemplate(LAYOUTS_DIR . $layout, [
         'title' => $params['title'],
         'menu' => renderTemplate('menu', ['menus'=> getMenu()] ),
         'content' => renderTemplate($page, $params)
